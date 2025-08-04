@@ -19,6 +19,28 @@
   overflow: visible !important; /* Ensure dropdown can overflow */
   z-index: 1000; /* Make sure header is above other content */
 }
+.nav-links-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 6% 100%);
+  background-color: #3b94f8;
+  z-index: 0;
+  border-radius: 0 0 12px 12px;
+  transition: all 0.3s ease;
+}
+.nav-links-wrapper {
+  position: relative;
+  overflow: visible;
+}
+
+@media screen and (max-width :768px) {
+   .nav-links-bg{
+    display: none;
+   }
+}
 
 @media (min-width: 768px) {
   .header-container {
@@ -165,7 +187,7 @@
     gap: 1.5rem;
     overflow: visible;
     /* clip-path: polygon(0 0, 100% 0, 100% 100%, 6% 100%); */
-    background-color: #3b94f8;
+    /* background-color: #3b94f8; */
     position: relative; /* Added for dropdown context */
   }
 
@@ -563,7 +585,7 @@
   font-weight: 500;
   font-size: 14px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 1s ease;
   text-align: center;
   padding: 8px;
   border-radius: 5px;
@@ -574,6 +596,8 @@
   color: #3b94f8; /* Changed from #ffc700 to match theme */
   background-color: #f8f9fa;
   transform: translateY(-2px);
+  transition: all 0.5s ease;
+
 }
 
 /* Key fix: Ensure the hover works */

@@ -10,10 +10,11 @@ import ReturnRefund from "./pages/Return-Refund";
 import OurKnowledge3 from "./pages/OurKnowledge";
 import ContactUs from "./components/ContactUs/ContactUs";
 import Career from "./components/Career/Career";
+import Privacypolicy from "./pages/Privacypolicy";
 
 function App() {
   const location = useLocation();
-  const hiddenHeaderPaths = ["/return-refund", "/terms-conditions"];
+  const hiddenHeaderPaths = ["/return-refund", "/terms-conditions", "/privacypolicy", "/contact"];
   const shouldShowHeader = !hiddenHeaderPaths.includes(location.pathname);
 
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/our-knowledge" element={<OurKnowledge3 />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/about-careers" element={<Career/>} />
+        <Route path="/privacypolicy" element={<Privacypolicy />} />
       </Routes>
 
       <Footer />

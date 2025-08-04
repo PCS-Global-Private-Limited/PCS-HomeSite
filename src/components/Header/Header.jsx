@@ -82,7 +82,9 @@ const Header = () => {
           </div>
         </div>
 
-       
+       <div className="nav-links-wrapper">
+        <div className="nav-links-bg"></div> 
+
         <div className={`nav-links ${isOpen ? 'show' : ''}`}>
           <div className="nav-item">
             <Link to="/"><p>Home</p></Link>
@@ -155,6 +157,7 @@ const Header = () => {
                       <div className="item">
                         <div className="dropdown_menu-title">
                           <Link to="/contact"><p>Contact Form</p></Link>
+                          <Link to="/privacypolicy"><p>Privacy Policy</p></Link>
                           <Link to="/terms-conditions"><p>Terms & Conditions</p></Link>
                           <Link to="/return-refund"><p>Return & Refund</p></Link>
                         </div>
@@ -165,7 +168,12 @@ const Header = () => {
               </li>
             </ul>
           </div>
+
+          <div className="nav-item">
+            <Link to="/sign-up"><p>Sign Up</p></Link>
+            </div>
         </div>
+       </div>
 
       </div>
     </div>

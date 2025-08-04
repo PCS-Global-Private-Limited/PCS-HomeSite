@@ -61,7 +61,7 @@ const TermsConditions = () => {
                 <a
                   href=""
                   className="text-white hover:text-black hover:bg-gray-200 p-2 rounded-xl flex items-center"
-                    onClick={()=>navigate('/return')}
+                    onClick={()=>navigate('/return-refund')}
                 >
                   <FaUndo className="mr-2" />
                   <b>Return & Refund</b>
