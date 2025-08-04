@@ -82,7 +82,9 @@ const Header = () => {
           </div>
         </div>
 
-       
+       <div className="nav-links-wrapper">
+        <div className="nav-links-bg"></div> 
+
         <div className={`nav-links ${isOpen ? 'show' : ''}`}>
           <div className="nav-item">
             <Link to="/"><p>Home</p></Link>
@@ -167,6 +169,7 @@ const Header = () => {
             </ul>
           </div>
         </div>
+       </div>
 
       </div>
     </div>
