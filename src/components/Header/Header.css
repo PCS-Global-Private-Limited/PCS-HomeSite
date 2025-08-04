@@ -585,7 +585,7 @@
   font-weight: 500;
   font-size: 14px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 1s ease;
   text-align: center;
   padding: 8px;
   border-radius: 5px;
@@ -596,6 +596,8 @@
   color: #3b94f8; /* Changed from #ffc700 to match theme */
   background-color: #f8f9fa;
   transform: translateY(-2px);
+  transition: all 0.5s ease;
+
 }
 
 /* Key fix: Ensure the hover works */

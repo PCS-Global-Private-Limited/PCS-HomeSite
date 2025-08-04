@@ -14,7 +14,7 @@ import Privacypolicy from "./pages/Privacypolicy";
 
 function App() {
   const location = useLocation();
-  const hiddenHeaderPaths = ["/return-refund", "/terms-conditions", "/privacypolicy"];
+  const hiddenHeaderPaths = ["/return-refund", "/terms-conditions", "/privacypolicy", "/contact"];
   const shouldShowHeader = !hiddenHeaderPaths.includes(location.pathname);
 
   return (

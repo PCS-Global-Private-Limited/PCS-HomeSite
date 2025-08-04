@@ -168,6 +168,10 @@ const Header = () => {
               </li>
             </ul>
           </div>
+
+          <div className="nav-item">
+            <Link to="/sign-up"><p>Sign Up</p></Link>
+            </div>
         </div>
        </div>
 
