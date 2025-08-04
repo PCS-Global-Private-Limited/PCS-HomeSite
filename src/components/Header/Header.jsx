@@ -155,6 +155,7 @@ const Header = () => {
                       <div className="item">
                         <div className="dropdown_menu-title">
                           <Link to="/contact"><p>Contact Form</p></Link>
+                          <Link to="/privacypolicy"><p>Privacy Policy</p></Link>
                           <Link to="/terms-conditions"><p>Terms & Conditions</p></Link>
                           <Link to="/return-refund"><p>Return & Refund</p></Link>
                         </div>

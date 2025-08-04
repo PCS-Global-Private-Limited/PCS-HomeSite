@@ -61,7 +61,7 @@ const ReturnRefund = () => {
                 <a
                   href=""
                   className="text-white hover:text-black hover:bg-gray-200 p-2 rounded-xl flex items-center"
-                    onClick={()=>navigate('/terms')}
+                    onClick={()=>navigate('/terms-conditions')}
                 >
                   <FaStickyNote className="mr-2" />
                   <b>Terms& Conditions</b>
