@@ -7,29 +7,29 @@ import "swiper/css/pagination";
 import "./ServiceCard.scss";
 
 const pricingData = {
-  "Hosting": [
-    {
-      title: "Shared Hosting",
-      price: "₹500",
-      sub: "Best for small sites",
-      features: ["1 Website", "20 GB SSD", "Standard Performance", "Weekly Backups"],
-      theme: "dark",
-    },
-    {
-      title: "VPS Hosting",
-      price: "₹1000",
-      sub: "Better performance",
-      features: ["Unlimited Websites", "50 GB SSD", "Enhanced Performance", "Daily Backups"],
-      theme: "blue",
-    },
-    {
-      title: "Cloud Hosting",
-      price: "₹1500",
-      sub: "For businesses",
-      features: ["Unlimited Websites", "Scalable Storage", "Max Performance", "Daily Backups"],
-      theme: "dark",
-    },
-  ],
+  // "Hosting": [
+  //   {
+  //     title: "Shared Hosting",
+  //     price: "₹500",
+  //     sub: "Best for small sites",
+  //     features: ["1 Website", "20 GB SSD", "Standard Performance", "Weekly Backups"],
+  //     theme: "dark",
+  //   },
+  //   {
+  //     title: "VPS Hosting",
+  //     price: "₹1000",
+  //     sub: "Better performance",
+  //     features: ["Unlimited Websites", "50 GB SSD", "Enhanced Performance", "Daily Backups"],
+  //     theme: "blue",
+  //   },
+  //   {
+  //     title: "Cloud Hosting",
+  //     price: "₹1500",
+  //     sub: "For businesses",
+  //     features: ["Unlimited Websites", "Scalable Storage", "Max Performance", "Daily Backups"],
+  //     theme: "dark",
+  //   },
+  // ],
 "Security": [
     {
       title: "SSL Certificate",
@@ -210,7 +210,7 @@ const pricingData = {
 };
 
 const CardSection = () => {
-  const [activeTab, setActiveTab] = useState("Hosting");
+  const [activeTab, setActiveTab] = useState("Security");
 
   return (
     <div className="card-section-wrapper">

@@ -4,29 +4,33 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import Alok from './Alok-Sir.png'; // Ensure this image is in the correct path
 
 const OurHistory = () => {
   return (
     <div className="our-history-page">
-      {/* 1. Banner Carousel */}
+      {/* 1. Banner Image (Single) */}
       <section className="banner-carousel">
-        <Swiper modules={[Autoplay, Pagination]} autoplay={{ delay: 3000 }} pagination={{ clickable: true }}>
-          {[1, 2, 3].map((n) => (
-            <SwiperSlide key={n}>
-              <img src={`https://pin.it/uOHyRtRwh+${n}`} alt={`Banner ${n}`} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <img
+          src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1920&q=80"
+          alt="Technology Banner"
+          style={{ width: "100%", height: "400px", objectFit: "cover" }}
+        />
       </section>
 
       {/* 2. Idea by CEO */}
       <section className="ceo-message">
         <div className="ceo-container">
-          <img src="https://via.placeholder.com/400x400" alt="CEO" />
+          <img src={Alok} alt="CEO" />
           <div className="ceo-content">
             <h2>Vision from Our Founder</h2>
             <p className="ceo-subtitle">“Innovation is not just about technology, it's about making lives better.”</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur vehicula nisl, nec consequat erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+            <p>Innovation with Purpose: 
+At PCS Global, we believe innovation isn’t just about creating cutting-edge technology, it’s about solving real-world problems and improving lives. Every product we build, every strategy we design, and every solution we deliver is rooted in that belief.
+We go beyond code and infrastructure to understand the people behind the processes. By combining deep technical expertise with a human-first approach, we create digital experiences that are intuitive, impactful, and future-ready.
+Whether it’s streamlining operations for a growing business, building intelligent systems that learn and adapt, or designing platforms that connect people more meaningfully, our goal remains the same: to make technology that matters.
+Because at the heart of true innovation is empathy, and at PCS Global, we’re committed to building a smarter, more connected, and more compassionate digital world.
+</p>
           </div>
         </div>
       </section>
@@ -47,10 +51,31 @@ const OurHistory = () => {
       <section className="company-timeline">
         <h2>Milestones Through the Years</h2>
         <div className="timeline-items">
-          {[2017, 2018, 2019, 2021, 2024].map((year, index) => (
+          { [
+            {
+              year: 2010,
+              desc: "PCS Global started its journey with a Single Telecaller cum receptionist and a single developer in 2010 from a two seated office at Kasba, Kolkata – the Initial name was The Professional Tutors."
+            },
+            {
+              year: 2012,
+              desc: "PCS Global started a new journey with its own office at Kasba, Kolkata – the Initial name was The Professional Consultancy Service."
+            },
+            {
+              year: 2014,
+              desc: "Promoted to an ISO certified company on 9th April, 2014. Company created head office at Merlin Infinite, Saltlake Sector – V."
+            },
+            {
+              year: 2016,
+              desc: "Company Enlisted Ministry of Human Resource Department."
+            },
+            {
+              year: 2019,
+              desc: "Company wins First Central Govt. Project www.bopter.gov.in"
+            }
+          ].map((item, index) => (
             <div className="timeline-box" key={index}>
-              <h3>{year}</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin cursus tortor at justo facilisis aliquet.</p>
+              <h3>{item.year}</h3>
+              <p>{item.desc}</p>
             </div>
           ))}
         </div>
@@ -60,11 +85,11 @@ const OurHistory = () => {
       <section className="mission-vision">
         <div className="mv-box">
           <h2>Our Mission</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae velit ex.</p>
+          <p>Our mission is to harness our collective strengths, technical depth, and brand legacy to accelerate growth in our core IT and consulting domains, while exploring complementary areas that expand our impact. We strive to continuously evolve—adapting to emerging technologies, embracing unconventional ideas, and staying ahead of industry trends. With a focus on excellence, agility, and innovation, we empower our clients, partners, and people to thrive in a rapidly changing digital world.</p>
         </div>
         <div className="mv-box">
           <h2>Our Vision</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae velit ex.</p>
+          <p>Vision PCS Global envisions is to be a globally respected, innovation-driven technology partner. Renowned by trust for our professionalism, integrity, and ability to deliver transformative digital solutions. We aim for seamless embedding internet driven technologies into both enterprise ecosystems and internal operations, creating smart, agile, and future-ready businesses. Guided by strong ethics, a collaborative mindset, and a deep sense of corporate responsibility, we aspire to grow as a regional and global leader in IT services and knowledge solutions.</p>
         </div>
       </section>
 
@@ -72,12 +97,12 @@ const OurHistory = () => {
       <section className="leadership-quotes">
         <h2>Words from Our Leaders</h2>
         <div className="quote-box">
-          <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit.”</p>
-          <span>- Jane Doe, CTO</span>
+          <p>“PCS Global, driven by a clear purpose — to build meaningful solutions that serve real people and solve real problems in real time. Our journey is rooted in trust, innovation, and a deep commitment to those we work with.”</p>
+          <span>- Abhishek Ghosh, CTO</span>
         </div>
         <div className="quote-box">
-          <p>“Praesent commodo cursus magna, vel scelerisque nisl consectetur et.”</p>
-          <span>- John Smith, COO</span>
+          <p>“At PCS Global, operational strength is built on clarity, consistency, and collaboration, aligning strategy with execution to ensure every solution we deliver is scalable, efficient, and future-ready.”</p>
+          <span>- Manish Bhattacharjee, COO</span>
         </div>
       </section>
 

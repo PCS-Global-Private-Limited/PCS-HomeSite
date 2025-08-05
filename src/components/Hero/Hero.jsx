@@ -11,6 +11,7 @@ import firstban from "./firstban.webp";
 import secondImg from "./secondImg.webp";
 import thirdImg from "./thirdImg.webp";
 
+
 const slides = [ { img: firstban }, { img: secondImg }, { img: thirdImg }];
 
 const Hero = () => {

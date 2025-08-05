@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <div>
-      <div className=" bg-[#f4eff4] py-5 md:mt-20" id="contactUs">
+      <div className=" bg-[#f4eff4] py-5" id="contactUs">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row lg:justify-between p-6 justify-center items-center md:items-start gap-5   text-center md:text-left">
             {/* Left Section - Brand and Description */}

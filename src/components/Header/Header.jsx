@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from 'react'
+import { Link, useLocation } from 'react-router-dom'; // <-- add useLocation
 import Logo from './logo.webp';
 import {
   FiMenu,
@@ -19,6 +19,9 @@ import './Header.css'
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
+  const dropdownTimeout = useRef(null); // useRef for stable timeout
+  const location = useLocation(); // <-- get current route
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,15 +32,69 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-      setIsOpen(false);}
+  // Determine if on home page
+  const isHome = location.pathname === '/';
+
+  // Determine color mode
+  const isDark = isHome ? !scrolled : false; // true = white text/icons, false = black
+
+  // Menu items for mapping
+  const menuItems = [
+    {
+      title: 'Services',
+      links: [
+        { to: '/enterprise-web-solutions', text: 'Enterprise Web Solutions' },
+        { to: '/branding-design-solutions', text: 'Branding & Design' },
+        { to: '/marketing-solutions', text: 'Marketing & Strategy' },
+      ],
+    },
+    {
+      title: 'About',
+      links: [
+        { to: '/about', text: 'Company' },
+        { to: '/our-history', text: 'Team' },
+        { to: '/about-careers', text: 'Careers' },
+      ],
+    },
+    {
+      title: 'Projects',
+      links: [
+        { to: '/our-knowledge', text: 'Our Knowledge' },
+        { to: '/portfolio', text: 'Portfolio' },
+      ],
+    },
+    {
+      title: 'Contact Us',
+      links: [
+        { to: '/contact', text: 'Contact Form' },
+        { to: '/privacypolicy', text: 'Privacy Policy' },
+        { to: '/terms-conditions', text: 'Terms & Conditions' },
+        { to: '/return-refund', text: 'Return & Refund' },
+      ],
+    },
+  ];
+
+  const handleDropdown = (idx) => {
+    if (openDropdown === idx) {
+      setOpenDropdown(null);
+    } else {
+      setOpenDropdown(idx);
+    }
+  };
+
+  // Shared handlers for dropdown mouse events
+  const handleDropdownMouseEnter = (idx) => {
+    if (dropdownTimeout.current) clearTimeout(dropdownTimeout.current);
+    setOpenDropdown(idx);
+  };
+
+  const handleDropdownMouseLeave = () => {
+    if (dropdownTimeout.current) clearTimeout(dropdownTimeout.current);
+    dropdownTimeout.current = setTimeout(() => setOpenDropdown(null), 10000); // 1 second
   };
 
   return (
-    <div className={`header-container ${scrolled ? 'scrolled' : 'transparent'}`}>
+    <div className={`header-container ${scrolled ? 'scrolled' : 'transparent'}${!isHome ? ' always-dark' : ''}`}>
   
       <div className="left-section">
         <div className="logo-and-toggle">
@@ -52,6 +109,7 @@ const Header = () => {
             onClick={() => setIsOpen(!isOpen)}
             className="toggle-button"
             aria-label="Toggle Navigation"
+            style={{ color: isDark ? 'white' : '#3b94f8' }}
           >
             {isOpen ? <FiX size={40} /> : <FiMenu size={40} />}
           </button>
@@ -62,23 +120,23 @@ const Header = () => {
       <div className="right-section">
         <div className="info-boxes">
           <div className="info-box">
-            <FiMapPin className="info-icon" />
-            <span>Merlin Infinite, Sector V, Saltlake, Kolkata, West Bengal</span>
+            <FiMapPin className="info-icon" style={{ color: isDark ? 'white' : '#3b94f8' }} />
+            <span style={{ color: isDark ? 'white' : '#313e3b' }}>Merlin Infinite, Sector V, Saltlake, Kolkata, West Bengal</span>
           </div>
           <div className="info-box">
-            <FiMail className="info-icon" />
-            <a href="mailto:support@pcsgpl.com" className="email-link">
+            <FiMail className="info-icon" style={{ color: isDark ? 'white' : '#3b94f8' }} />
+            <a href="mailto:support@pcsgpl.com" className="email-link" style={{ color: isDark ? 'white' : '#313e3b' }}>
               <span>support@pcsgpl.com</span>
             </a>
           </div>
           <div className="info-box">
-            <FiHelpCircle className="info-icon" />
-            <span>Need Help?</span>
+            <FiHelpCircle className="info-icon" style={{ color: isDark ? 'white' : '#3b94f8' }} />
+            <span style={{ color: isDark ? 'white' : '#313e3b' }}>Need Help?</span>
           </div>
           <div className="info-box social">
-            <a href="https://www.facebook.com/hrpcsglobal/" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
-            <a href="https://www.linkedin.com/company/pcs-global-pvt-ltd/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
-            <a href="https://www.instagram.com/pcsglobalpvtltd/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+            <a href="https://www.facebook.com/hrpcsglobal/" target="_blank" rel="noopener noreferrer" style={{ color: isDark ? 'white' : '#3b94f8' }}><FaFacebookF /></a>
+            <a href="https://www.linkedin.com/company/pcs-global-pvt-ltd/" target="_blank" rel="noopener noreferrer" style={{ color: isDark ? 'white' : '#3b94f8' }}><FaLinkedin /></a>
+            <a href="https://www.instagram.com/pcsglobalpvtltd/" target="_blank" rel="noopener noreferrer" style={{ color: isDark ? 'white' : '#3b94f8' }}><FaInstagram /></a>
           </div>
         </div>
 
@@ -89,89 +147,47 @@ const Header = () => {
           <div className="nav-item">
             <Link to="/"><p>Home</p></Link>
           </div>
-          <div className="nav-item">
-            <ul className="desktop-menu-category-list">
-              <li className="menu-category">
-                <a href="#" className="menu-title">Services</a>
-                <div className="dropdown-panel">
-                  <div className="downpannel_content">
-                    <div className="dropdown-panel-list">
-                      <div className="item">
-                        <div className="dropdown_menu-title">
-                          <Link to="/enterprise-web-solutions"><p>Enterprise Web Solutions</p></Link>
-                          <Link to="/branding-design-solutions"><p>Branding & Design</p></Link>
-                          <Link to="/marketing-solutions"><p>Marketing & Strategy</p></Link>
+          {menuItems.map((item, idx) => (
+            <div className="nav-item" key={idx}>
+              <ul className="desktop-menu-category-list">
+                <li
+                  className={`menu-category${openDropdown === idx ? ' open' : ''}`}
+                  onClick={() => window.innerWidth < 768 && handleDropdown(idx)}
+                  onMouseEnter={() => handleDropdownMouseEnter(idx)}
+                  onMouseLeave={handleDropdownMouseLeave}
+                >
+                  <a href="#" className="menu-title">{item.title}</a>
+                  <div
+                    className="dropdown-panel"
+                    onMouseEnter={() => handleDropdownMouseEnter(idx)}
+                    onMouseLeave={handleDropdownMouseLeave}
+                  >
+                    <div className="downpannel_content">
+                      <div className="dropdown-panel-list">
+                        <div className="item">
+                          <div className="dropdown_menu-title">
+                            {item.links.map((link, linkIdx) => (
+                              <Link to={link.to} key={linkIdx}><p>{link.text}</p></Link>
+                            ))}
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div className="nav-item">
-            <ul className="desktop-menu-category-list">
-              <li className="menu-category">
-                <a href="#" className="menu-title">About</a>
-                <div className="dropdown-panel">
-                  <div className="downpannel_content">
-                    <div className="dropdown-panel-list">
-                      <div className="item">
-                        <div className="dropdown_menu-title">
-                          <Link to="/about"><p>Company</p></Link>
-                          <Link to="/our-history"><p>Team</p></Link>
-                          <Link to="/about-careers"><p>Careers</p></Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div className="nav-item">
-            <ul className="desktop-menu-category-list">
-              <li className="menu-category">
-                <a href="#" className="menu-title">Projects</a>
-                <div className="dropdown-panel">
-                  <div className="downpannel_content">
-                    <div className="dropdown-panel-list">
-                      <div className="item">
-                        <div className="dropdown_menu-title">
-                          <Link to="/our-knowledge"><p>Our Knowledge</p></Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div className="nav-item">
-            <ul className="desktop-menu-category-list">
-              <li className="menu-category">
-                <a href="#" className="menu-title">Contact Us</a>
-                <div className="dropdown-panel">
-                  <div className="downpannel_content">
-                    <div className="dropdown-panel-list">
-                      <div className="item">
-                        <div className="dropdown_menu-title">
-                          <Link to="/contact"><p>Contact Form</p></Link>
-                          <Link to="/privacypolicy"><p>Privacy Policy</p></Link>
-                          <Link to="/terms-conditions"><p>Terms & Conditions</p></Link>
-                          <Link to="/return-refund"><p>Return & Refund</p></Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          <div className="nav-item">
-            <Link to="/sign-up"><p>Sign Up</p></Link>
+                </li>
+              </ul>
             </div>
+          ))}
+          <div className="nav-item">
+            <a
+              href="https://sales.pcsgpl.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: isDark ? 'white' : '#3b94f8', textDecoration: 'none' }}
+            >
+              <p>Sign Up</p>
+            </a>
+          </div>
         </div>
        </div>
 

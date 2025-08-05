@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import know from "./kkkk.jpg"; // Assuming this is the correct path to the image
+import know from "./whitetech.jpg"; // Assuming this is the correct path to the image
 import {
   Briefcase, Lightbulb, TrendingUp, Users, Code, Cloud, ChevronRight,
   Database, Coffee, Smartphone, Server, Wifi, FlaskConical, BrainCircuit
@@ -32,7 +32,6 @@ const OurKnowledge3 = () => {
       { opacity: 0, y: 20 },
       { opacity: 1, y: 0, duration: 1.2, delay: 0.9, ease: "power3.out" }
     );
-
     // General Section Animations (About, CTA, Footer)
     sectionRefs.current.forEach(section => {
       gsap.fromTo(section,
@@ -148,7 +147,7 @@ const OurKnowledge3 = () => {
   ];
 
   return (
-    <div className="font-inter antialiased text-gray-200 bg-gray-900 min-h-screen">
+    <div className="font-inter antialiased text-gray-800 bg-white min-h-screen">
       {/* Tailwind CSS CDN */}
       <script src="https://cdn.tailwindcss.com"></script>
       {/* Font Inter CDN */}
@@ -156,7 +155,7 @@ const OurKnowledge3 = () => {
 
       {/* Hero Section */}
       <section ref={heroRef} className="relative h-[82vh] flex items-center justify-center p-6 overflow-hidden">
-        <div className="absolute inset-0 h-[82vh] bg-cover bg-center opacity-10" style={{ backgroundImage: `url(${know})` }}></div>
+        <div className="absolute inset-0 h-[82vh] bg-cover bg-center" style={{ backgroundImage: `url(${know})` }}></div>
         <div className="relative z-10 text-center max-w-5xl mx-auto">
           <h1 className="text-6xl md:text-8xl font-extrabold mb-6 leading-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
             Future-Proof Your Business.
@@ -171,25 +170,25 @@ const OurKnowledge3 = () => {
       </section>
 
       {/* About Section */}
-      <section ref={el => sectionRefs.current[0] = el} className="py-24 px-6 bg-gray-800 text-center">
+      <section ref={el => sectionRefs.current[0] = el} className="py-24 px-6 bg-white text-center">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-5xl font-bold text-white mb-10">Our Philosophy</h2>
-          <p className="text-lg text-gray-300 leading-relaxed">
-            We are a team of dedicated experts committed to pushing the boundaries of what's possible. Our OurKnowledge3roach combines deep industry knowledge with agile methodologies to deliver solutions that are not just effective, but truly transformative. We believe in collaboration, transparency, and continuous improvement.
+          <h2 className="text-5xl font-bold text-gray-900 mb-10">Our Philosophy</h2>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            We are a team of dedicated experts committed to pushing the boundaries of what's possible. Our approach combines deep industry knowledge with agile methodologies to deliver solutions that are not just effective, but truly transformative. We believe in collaboration, transparency, and continuous improvement.
           </p>
         </div>
       </section>
 
       {/* Tasks/Services Section - Alternating Layout */}
-      <section className="py-24 px-6 bg-gray-900">
+      <section className="py-24 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-5xl font-bold text-center text-white mb-16">Our Core Offerings</h2>
-          <div className="grid grid-cols-1 gap-12"> {/* Changed to a single column grid for better flow with alternating layout */}
+          <h2 className="text-5xl font-bold text-center text-gray-900 mb-16">Our Core Offerings</h2>
+          <div className="grid grid-cols-1 gap-12">
             {tasks.map((task, index) => (
               <div
                 key={index}
                 ref={el => taskRefs.current[index] = el}
-                className={`flex flex-col md:flex-row items-center gap-12 mb-20 ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}
+                className={`flex flex-col md:flex-row items-center gap-12 mb-20 ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''} bg-white rounded-2xl shadow-md p-6`}
               >
                 <div className="md:w-1/2 flex justify-center p-4">
                   <img
@@ -203,9 +202,9 @@ const OurKnowledge3 = () => {
                   <div className="mb-6 flex justify-center md:justify-start">
                     {task.icon}
                   </div>
-                  <h3 className="text-4xl font-semibold text-white mb-6">{task.title}</h3>
-                  <p className="text-lg text-gray-300 leading-relaxed">{task.description}</p>
-                  <button className="mt-8 text-blue-400 hover:text-blue-300 transition duration-300 flex items-center justify-center md:justify-start mx-auto md:mx-0">
+                  <h3 className="text-4xl font-semibold text-gray-900 mb-6">{task.title}</h3>
+                  <p className="text-lg text-gray-700 leading-relaxed">{task.description}</p>
+                  <button className="mt-8 text-blue-600 hover:text-blue-500 transition duration-300 flex items-center justify-center md:justify-start mx-auto md:mx-0">
                     Learn More <ChevronRight className="ml-2" size={18} />
                   </button>
                 </div>
@@ -216,13 +215,13 @@ const OurKnowledge3 = () => {
       </section>
 
       {/* Call to Action Section */}
-      <section ref={el => sectionRefs.current[1] = el} className="py-24 px-6 bg-gradient-to-r from-blue-700 to-purple-700 text-white text-center">
+      <section ref={el => sectionRefs.current[1] = el} className="py-24 px-6 bg-gradient-to-r from-blue-100 to-purple-100 text-gray-900 text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-5xl font-bold mb-8">Ready to Build Something Great?</h2>
           <p className="text-xl mb-10 opacity-90">
             We're eager to hear about your vision and discuss how our expertise can bring it to life.
           </p>
-          <button className="bg-white text-blue-700 px-10 py-5 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 transform hover:scale-105 font-bold text-lg">
+          <button className="bg-blue-600 text-white px-10 py-5 rounded-full shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105 font-bold text-lg">
             Start a Conversation
           </button>
         </div>

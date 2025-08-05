@@ -11,15 +11,20 @@ import OurKnowledge3 from "./pages/OurKnowledge";
 import ContactUs from "./components/ContactUs/ContactUs";
 import Career from "./components/Career/Career";
 import Privacypolicy from "./pages/Privacypolicy";
+import Portfolio from "./pages/Portfolio/Portfolio";
 
 function App() {
   const location = useLocation();
-  const hiddenHeaderPaths = ["/return-refund", "/terms-conditions", "/privacypolicy", "/contact"];
+  const hiddenHeaderPaths = ["/return-refund", "/terms-conditions", "/privacypolicy"];
   const shouldShowHeader = !hiddenHeaderPaths.includes(location.pathname);
+
+  // Add spacer for all pages except home and those without header
+  const shouldShowSpacer = shouldShowHeader && location.pathname !== "/";
 
   return (
     <>
       {shouldShowHeader && <Header />}
+      {shouldShowSpacer && <div style={{ height: "120px" }} />} {/* Adjust height as needed */}
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -31,6 +36,7 @@ function App() {
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/about-careers" element={<Career/>} />
         <Route path="/privacypolicy" element={<Privacypolicy />} />
+        <Route path="/portfolio" element={<Portfolio />} />
       </Routes>
 
       <Footer />
