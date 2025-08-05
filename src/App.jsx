@@ -18,7 +18,7 @@ function App() {
   const hiddenHeaderPaths = ["/return-refund", "/terms-conditions", "/privacypolicy"];
   const shouldShowHeader = !hiddenHeaderPaths.includes(location.pathname);
 
-  // Add spacer for all pages except home and those without header
+  
   const shouldShowSpacer = shouldShowHeader && location.pathname !== "/";
 
   return (
