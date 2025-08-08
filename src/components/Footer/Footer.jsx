@@ -103,7 +103,7 @@ function Footer() {
                   <a href="#" className=" transition-colors text-sm">
                     Project
                   </a>
-                  <a href="#" className="transition-colors text-sm">
+                  <a href="/privacypolicy" className="transition-colors text-sm">
                     Privacy Policy
                   </a>
                 </nav>
