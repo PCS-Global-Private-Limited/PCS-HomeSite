@@ -103,7 +103,7 @@ function Footer() {
                   <a href="#" className=" transition-colors text-sm">
                     Project
                   </a>
-                  <a href="#" className="transition-colors text-sm">
+                  <a href="/privacypolicy" className="transition-colors text-sm">
                     Privacy Policy
                   </a>
                 </nav>
@@ -134,8 +134,8 @@ function Footer() {
               {/* Right side - Email form */}
               <div className="">
                 <form className="flex md:gap-0 md:flex-row items-center justify-center md:justify-start bg-white rounded-3xl">
-                  <input type="email" placeholder="type your email" className="flex-1 px-8 py-2 text-gray-600 placeholder-gray-400 focus:outline-none focus:ring-0 bg-white  rounded-4xl" required />
-                  <button className="bg-[#3b94f8] px-5 py-2 text-white rounded-2xl" type="submit">Submit</button>
+                  <input type="email" placeholder="type your email" className="flex-1 pl-3 md:px-8 md:py-2 text-gray-600 placeholder-gray-400 focus:outline-none focus:ring-0 bg-white  rounded-4xl" required />
+                  <button className="bg-[#3b94f8] px-4 md:px-5 py-2 text-white rounded-2xl" type="submit">Submit</button>
                 </form>
 
               </div>
