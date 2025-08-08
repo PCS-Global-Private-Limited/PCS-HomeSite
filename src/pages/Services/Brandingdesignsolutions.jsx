@@ -1,5 +1,5 @@
 import React from 'react'
-import './maintain.webp'; 
+import './maintain.webp'; //path of the image
 
 const Brandingdesignsolutions = () => {
   return (
