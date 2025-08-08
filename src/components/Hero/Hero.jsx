@@ -58,9 +58,9 @@ const Hero = () => {
                   </p>
                   <button
                     className="cta-button w-[95%] md:w-[350px]"
-                    onClick={() => scrollToSection("contact")}
                   >
-                    Contact Us &raquo;
+                    <a href="https://sales.pcsgpl.com">Signup &raquo;</a>
+                    
                   </button>
                 </div>
               </div>
