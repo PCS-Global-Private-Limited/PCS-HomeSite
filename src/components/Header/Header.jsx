@@ -183,7 +183,7 @@ const Header = () => {
               href="https://sales.pcsgpl.com"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: isDark ? 'white' : '#3b94f8', textDecoration: 'none' }}
+              style={{ color: isDark ? 'white' : '', textDecoration: 'none' }}
             >
               <p>Sign Up</p>
             </a>
