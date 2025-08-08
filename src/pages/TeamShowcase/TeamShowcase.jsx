@@ -13,31 +13,41 @@ const TeamShowcase = () => {
 
   const teams = {
     'Internet of Things': [
-      { name: 'Alok Halder', img: '/images/alok.jpg' },
-      { name: 'Abhishek Ghosh', img: '/images/abhishek.jpg' },
-      { name: 'Charlie', img: '/images/charlie.jpg' },
-      { name: 'Daisy', img: '/images/daisy.jpg' },
+      { name: 'Alok Halder', img: '/images/AlokHalder.png' },
+      { name: 'Abhishek Ghosh', img: '/images/AbhishekhGhose_IoT.png' },
+      { name: 'Manish', img: '/images/Manish.png' },
+     
     ],
     'MERN Stack': [
-      { name: 'Eve', img: '/images/eve.jpg' },
-      { name: 'Frank', img: '/images/frank.jpg' },
-      { name: 'Grace', img: '/images/grace.jpg' },
+      { name: 'Bharat Reddey', img: '/images/BHARATH_SIMHA_REDDY_Mern.png' },
+      { name: 'Aparna', img: '/images/Aparna_Mern.png' },
+      { name: 'Sonu Mondal', img: '/images/SonuMondal_Mern.png' },
+      { name: 'Atrika Show', img: '/images/Atrika_Mern.png' },
+      { name: 'Medhun', img: '/images/Medhun_mern.png' },
+      { name: 'Raj Jaiswal', img: '/images/RajJaiswal_mern.png' },
+      { name: 'Rittima', img: '/images/Rittima_mern.png' }
     ],
     'JAVA Full-Stack': [
-      { name: 'Henry', img: '/images/henry.jpg' },
-      { name: 'Ivy', img: '/images/ivy.jpg' },
-      { name: 'Jack', img: '/images/jack.jpg' },
+      { name: 'Nayan Kumar Pramanik', img: '/images/Nayan_Kumar_Pramanik_Java.png' },
+      { name: 'Rahul Kumar Rajak', img: '/images/Rahul_Kumar_Rajak_Java.png' },
+      { name: 'Shivani Gupta', img: '/images/Shivani_gupta_Java.png' }, 
+      { name: 'Subhadip Pradhan', img: '/images/SubhadipPradhan_Java.png' }
     ],
-    'Salesforce': [
-      { name: 'Karen', img: '/images/karen.jpg' },
-      { name: 'Leo', img: '/images/leo.jpg' },
-      { name: 'Mia', img: '/images/mia.jpg' },
+    'Data Science & Python': [ 
+      { name: 'Isha', img: '/images/Isha_Ds.png' },
+      { name: 'Prantik', img: '/images/Prantik_Ds.png' },
+      { name: 'Sagnik Saha', img: '/images/Sagnik_Saha_Ds.png' },
+      { name: 'Sancharita Dutta', img: '/images/Sancharita_Dutta_Ds.png' },
+      { name: 'Subhasis Chattopadhyay', img: '/images/SubhasisChattopadhyay_Ds.png' },
     ],
     'Management': [
-      { name: 'Nina', img: '/images/nina.jpg' },
+      { name: 'Dipanwita', img: '/images/Dipanwita_Management.png' },
       { name: 'Oscar', img: '/images/oscar.jpg' },
       { name: 'Paul', img: '/images/paul.jpg' },
     ],
+    "Design":[
+      {name : 'Tapasi Dhar', img : '/images/TapasiDhar_Desgin.png'}
+    ]
   };
 
   return (
