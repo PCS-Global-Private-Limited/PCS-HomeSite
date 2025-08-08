@@ -25,6 +25,7 @@ import SF_Madhumita from './SF_Madhumita.png';
 import SF_Sampurna from './SF_Sampurna.png';
 
 // Java team
+import Java_Anita from './Java_Anita.png';
 import Java_Nayan from './Java_Nayan.png';
 import Java_Rahul from './Java_Rahul.png';
 import Java_Shivani from './Java_Shivani.png';
@@ -46,7 +47,7 @@ import mgmt1 from './Dipanwita.png';
 
 // Example leaders data
 const leaders = [
-  { name: 'Alok Halder', designation: 'CEO & Founder', img: Alok },
+  { name: 'Alok Halder', designation: 'CEO & MD', img: Alok },
   { name: 'Abhishek Ghosh', designation: 'Chief Technology Officer', img: Abhishek },
   { name: 'Manish Bhattacharjee', designation: 'Chief Operating Officer', img: Manish },
   { name: 'Dipanwita Mukherjee', designation: 'Project Manager', img: Dipanwita },
@@ -62,8 +63,8 @@ const getTeamMembers = (members, prefix, designation = 'Member') =>
 
 const teams = {
   'MERN Stack': [
-    { name: 'Bharath Simha Reddy', img: MERN_Bharath, designation: 'Sr. Software Engineer' },
-    { name: 'Anjali', img: MERN_Anjali, designation: 'Trainee Software Engineer' },
+    // { name: 'Bharath Simha Reddy', img: MERN_Bharath, designation: ' Software Engineer' },
+    // { name: 'Piyush Mishra', img: MERN_Piyush, designation: 'Trainee Software Engineer' },
     { name: 'Aparna', img: MERN_Aparna, designation: 'Trainee Software Engineer' },
     { name: 'Atrika', img: MERN_Atrika, designation: 'Trainee Software Engineer' },
     { name: 'Medhun', img: MERN_Medhun, designation: 'Software Engineer' },
@@ -81,18 +82,19 @@ const teams = {
     { name: 'Sampurna', img: SF_Sampurna, designation: 'Salesforce Specialist' },
   ],
   'JAVA Developer': [
+    { name: 'Anita Acharjya', img: Java_Anita, designation: 'Sr.Java Developer' },
     { name: 'Nayan', img: Java_Nayan, designation: 'Java Trainer' },
     { name: 'Rahul Kumar Rajak', img: Java_Rahul, designation: 'Java Developer' },
     { name: 'Shivani', img: Java_Shivani, designation: 'Java Developer' },
     { name: 'Subhadip', img: Java_Subhadip, designation: 'Java Developer' },
   ],
-  'Data Science': [
-    { name: 'Isha', img: Data_Isha, designation: 'Data Scientist' },
-    { name: 'Prantik', img: Data_Prantik, designation: 'Data Scientist' },
-    { name: 'Sagnik', img: Data_Sagnik, designation: 'Data Scientist' },
-    { name: 'Sancharita', img: Data_Sancharita, designation: 'Data Scientist' },
-    { name: 'Shreya', img: Data_Shreya, designation: 'Data Scientist' },
-    { name: 'Subhasis', img: Data_Subhasis, designation: 'Data Scientist' },
+  'Data Science and Python': [
+    { name: 'Isha', img: Data_Isha, designation: 'Data Analyst' },
+    { name: 'Prantik', img: Data_Prantik, designation: 'Data Science' },
+    { name: 'Sagnik', img: Data_Sagnik, designation: 'Data Science' },
+    { name: 'Sancharita', img: Data_Sancharita, designation: 'Data Science' },
+    { name: 'Shreya', img: Data_Shreya, designation: 'Data Science' },
+    { name: 'Subhasis', img: Data_Subhasis, designation: ' Python' },
   ],
   'Design': [
     { name: 'Shreya', img: Data_Shreya, designation: 'Canva & Figma Designer' },

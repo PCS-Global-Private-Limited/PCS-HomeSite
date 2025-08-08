@@ -95,13 +95,19 @@
     .mv-box {
       background: #fff;
       padding: 2rem;
-      width: 300px;
+      width: 500px;
       text-align: center;
       border: 1px solid #ddd;
       border-radius: 10px;
 
       h2 {
         color: #2c3e50;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      p{
+        font-size: 1.1rem;
+
       }
     }
   }
