@@ -12,10 +12,13 @@ import ContactUs from "./components/ContactUs/ContactUs";
 import Career from "./components/Career/Career";
 import Privacypolicy from "./pages/Privacypolicy";
 import Portfolio from "./pages/Portfolio/Portfolio";
+import Enterprisewebsolutions from "./pages/Services/Enterprisewebsolutions";
+import Brandingdesignsolutions from "./pages/Services/Brandingdesignsolutions";
+import Marketingsolutons from "./pages/Services/Marketingsolutons";
 
 function App() {
   const location = useLocation();
-  const hiddenHeaderPaths = ["/return-refund", "/terms-conditions", "/privacypolicy"];
+  const hiddenHeaderPaths = ["/return-refund", "/terms-conditions", "/privacypolicy",];
   const shouldShowHeader = !hiddenHeaderPaths.includes(location.pathname);
 
   
@@ -37,6 +40,9 @@ function App() {
         <Route path="/about-careers" element={<Career/>} />
         <Route path="/privacypolicy" element={<Privacypolicy />} />
         <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/enterprise-web-solutions" element={<Enterprisewebsolutions/>} />
+        <Route path="/branding-design-solutions" element={<Brandingdesignsolutions />} />
+        <Route path="/marketing-solutions" element={<Marketingsolutons />} />
       </Routes>
 
       <Footer />
