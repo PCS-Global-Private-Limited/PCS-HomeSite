@@ -12,11 +12,18 @@ const TeamShowcase = () => {
   };
 
   const teams = {
-  
-    'Internet of Things': [
+
+    'Team': [
       { name: 'Alok ', img: '/images/AlokHalder.png', title: 'CEO & MD' },
-      { name: 'Abhishek Ghosh', img: '/images/AbhishekhGhose_IoT.png' , title: 'Chief Technology Officer (CTO)' },
       { name: 'Manish', img: '/images/Manish.png', title: 'Chief Operating Officer (COO)' },
+      { name: 'Abhishek Ghosh', img: '/images/AbhishekhGhose_IoT.png' , title: 'Chief Technology Officer (CTO)' },
+    ],
+
+    'Internet of Things': [
+      { name: 'Abhishek Ghosh', img: '/images/AbhishekhGhose_IoT.png' , title: 'Chief Technology Officer (CTO)' },
+      { name: 'Sampurna Nag', img: '/images/Sampurna_Nag_IoT.png' , title: 'Chief Technology Officer (CTO)' },
+      { name: 'Snehasis Dolai', img: '/images/Snehashis_Dolai_IoT.png' , title: 'Chief Technology Officer (CTO)' },
+
      
     ],
     'MERN Stack': [
@@ -29,7 +36,7 @@ const TeamShowcase = () => {
       { name: 'Rittima', img: '/images/Rittima_mern.png' }
     ],
     'JAVA Full-Stack': [
-      { name: 'Anita Acharjya', img: '/images/Ankita_Java.png', title: ' Sr.Java Developer' },
+      { name: 'Anita Acharjya', img: '/images/AnitaAchaya_Java.png', title: ' Sr.Java Developer' },
       { name: 'Nayan Kumar Pramanik', img: '/images/Nayan_Kumar_Pramanik_Java.png' },
       { name: 'Rahul Kumar Rajak', img: '/images/Rahul_Kumar_Rajak_Java.png' },
       { name: 'Shivani Gupta', img: '/images/Shivani_gupta_Java.png' }, 
@@ -37,19 +44,19 @@ const TeamShowcase = () => {
     ],
     'Data Science & Python': [ 
       { name: 'Isha', img: '/images/Isha_Ds.png' },
-      { name: 'Dipanwita', img: '/images/Dipanwita_Management.png' },
       { name: 'Prantik', img: '/images/Prantik_Ds.png' },
       { name: 'Sagnik Saha', img: '/images/Sagnik_Saha_Ds.png' },
       { name: 'Sancharita Dutta', img: '/images/Sancharita_Dutta_Ds.png' },
       { name: 'Subhasis Chattopadhyay', img: '/images/SubhasisChattopadhyay_Ds.png' },
     ],
     'Management': [
+            { name: 'Dipanwita', img: '/images/Dipanwita_Management.png' },
       { name: 'Kushbu Hasani', img: '/images/oscar.jpg' },
       { name: 'Jyothi', img: '/images/paul.jpg' },
     ],
     "Design":[
-      { name: 'Shivam', img: '/images/TapasiDhar_Desgin.png' },
-      { name: 'Shreya', img: '/images/TapasiDhar_Desgin.png' },
+      // { name: 'Shivam', img: '/images/TapasiDhar_Desgin.png' },
+      { name: 'Shreya', img: '/images/Shreya.png' },
       {name : 'Tapasi Dhar', img : '/images/TapasiDhar_Desgin.png'}
     ]
   };
