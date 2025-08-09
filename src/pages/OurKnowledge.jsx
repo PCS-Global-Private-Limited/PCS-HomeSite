@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import know from "./whitetech.jpg"; // Assuming this is the correct path to the image
@@ -10,6 +11,7 @@ import {
 gsap.registerPlugin(ScrollTrigger);
 
 const OurKnowledge3 = () => {
+  const navigate = useNavigate();
   const heroRef = useRef(null);
   const sectionRefs = useRef([]); // For general section animations
   const taskRefs = useRef([]); // For individual task animations
@@ -148,28 +150,27 @@ const OurKnowledge3 = () => {
 
   return (
     <div className="font-inter antialiased text-gray-800 bg-white min-h-screen">
-      {/* Tailwind CSS CDN */}
+      
       <script src="https://cdn.tailwindcss.com"></script>
-      {/* Font Inter CDN */}
+     
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-      {/* Hero Section */}
+      
       <section ref={heroRef} className="relative h-[82vh] flex items-center justify-center p-6 overflow-hidden">
         <div className="absolute inset-0 h-[82vh] bg-cover bg-center" style={{ backgroundImage: `url(${know})` }}></div>
         <div className="relative z-10 text-center max-w-5xl mx-auto">
-          <h1 className="text-6xl md:text-8xl font-extrabold mb-6 leading-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+          <h1 className="text-6xl md:text-8xl font-extrabold mb-6 leading-tight text-blue-500 bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
             Future-Proof Your Business.
           </h1>
           <p className="text-xl md:text-2xl mb-10 opacity-80 max-w-3xl mx-auto">
             Empowering innovation and accelerating growth with bespoke digital solutions.
           </p>
-          <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-10 py-5 rounded-full shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105 font-bold text-lg flex items-center justify-center mx-auto">
+          <button className="bg-gradient-to-r from-blue-400 to-blue-800 text-white px-10 py-5 rounded-full shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105 font-bold text-lg flex items-center justify-center mx-auto" onClick={() => navigate('/about')}>
             Explore Our Vision <ChevronRight className="ml-2" size={20} />
           </button>
         </div>
       </section>
 
-      {/* About Section */}
       <section ref={el => sectionRefs.current[0] = el} className="py-24 px-6 bg-white text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-5xl font-bold text-gray-900 mb-10">Our Philosophy</h2>
@@ -179,7 +180,7 @@ const OurKnowledge3 = () => {
         </div>
       </section>
 
-      {/* Tasks/Services Section - Alternating Layout */}
+     
       <section className="py-24 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-5xl font-bold text-center text-gray-900 mb-16">Our Core Offerings</h2>
@@ -214,31 +215,19 @@ const OurKnowledge3 = () => {
         </div>
       </section>
 
-      {/* Call to Action Section */}
+    
       <section ref={el => sectionRefs.current[1] = el} className="py-24 px-6 bg-gradient-to-r from-blue-100 to-purple-100 text-gray-900 text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-5xl font-bold mb-8">Ready to Build Something Great?</h2>
           <p className="text-xl mb-10 opacity-90">
             We're eager to hear about your vision and discuss how our expertise can bring it to life.
           </p>
-          <button className="bg-blue-600 text-white px-10 py-5 rounded-full shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105 font-bold text-lg">
+          <button className="bg-blue-600 text-white px-10 py-5 rounded-full shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105 font-bold text-lg" onClick={() => navigate('/contact')}>
             Start a Conversation
           </button>
         </div>
       </section>
 
-      {/* Footer Section
-      <footer ref={el => sectionRefs.current[2] = el} className="py-12 px-6 bg-gray-950 text-white text-center">
-        <div className="max-w-6xl mx-auto">
-          <p className="text-sm text-gray-400">&copy; {new Date().getFullYear()} [PCS GLOBAL Pvt. Ltd.]. All rights reserved.</p>
-          <div className="mt-6 flex justify-center space-x-8">
-            <a href="#" className="text-gray-400 hover:text-white transition duration-300">Privacy</a>
-            <a href="#" className="text-gray-400 hover:text-white transition duration-300">Terms</a>
-            <a href="#" className="text-gray-400 hover:text-white transition duration-300">Careers</a>
-            <a href="#" className="text-gray-400 hover:text-white transition duration-300">Blog</a>
-          </div>
-        </div>
-      </footer> */}
     </div>
   );
 };

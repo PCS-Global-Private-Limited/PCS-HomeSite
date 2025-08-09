@@ -121,7 +121,7 @@ const Header = () => {
         <div className="info-boxes">
           <div className="info-box">
             <FiMapPin className="info-icon" style={{ color: isDark ? 'white' : '#3b94f8' }} />
-            <span style={{ color: isDark ? 'white' : '#313e3b' }}>Merlin Infinite, Sector V, Saltlake, Kolkata, West Bengal</span>
+            <span style={{ color: isDark ? 'white' : '#313e3b' }}><a href='https://maps.app.goo.gl/83VyQKSB7DeZLuAA7c:\Users\dell\Downloads\Logopcs.png'> Merlin Infinite, Sector V, Saltlake, Kolkata, West Bengal</a> </span>
           </div>
           <div className="info-box">
             <FiMail className="info-icon" style={{ color: isDark ? 'white' : '#3b94f8' }} />
