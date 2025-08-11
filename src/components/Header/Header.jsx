@@ -38,22 +38,29 @@ const Header = () => {
   // Determine color mode
   const isDark = isHome ? !scrolled : false; // true = white text/icons, false = black
 
-  // Menu items for mapping
+  // Function to scroll to services section
+  const scrollToServices = () => {
+    if (isHome) {
+      const servicesSection = document.getElementById('services');
+      if (servicesSection) {
+        servicesSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // If not on home page, navigate to home and then scroll to services
+      window.location.href = '/#services';
+    }
+    // Close mobile menu if open
+    setIsOpen(false);
+  };
+
+  // Menu items for mapping (Services removed from dropdown structure)
   const menuItems = [
-    {
-      title: 'Services',
-      links: [
-        { to: '/enterprise-web-solutions', text: 'Enterprise Web Solutions' },
-        { to: '/branding-design-solutions', text: 'Branding & Design' },
-        { to: '/marketing-solutions', text: 'Marketing & Strategy' },
-      ],
-    },
     {
       title: 'About',
       links: [
         { to: '/about', text: 'Company' },
-        { to: '/our-history', text: 'Team' },
-        { to: '/about-careers', text: 'Careers' },
+        { to: '/our-team', text: 'Team' },
+        { to: '/careers', text: 'Careers' },
       ],
     },
     {
@@ -121,7 +128,14 @@ const Header = () => {
         <div className="info-boxes">
           <div className="info-box">
             <FiMapPin className="info-icon" style={{ color: isDark ? 'white' : '#3b94f8' }} />
-            <span style={{ color: isDark ? 'white' : '#313e3b' }}>Merlin Infinite, Sector V, Saltlake, Kolkata, West Bengal</span>
+            <a 
+              href="https://maps.app.goo.gl/YkUEFGteKUcCEJmTA" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              style={{ color: isDark ? 'white' : '#313e3b', textDecoration: 'none' }}
+              >
+              <span>Merlin Infinite, Sector V, Saltlake, Kolkata, West Bengal</span>
+            </a>
           </div>
           <div className="info-box">
             <FiMail className="info-icon" style={{ color: isDark ? 'white' : '#3b94f8' }} />
@@ -147,6 +161,28 @@ const Header = () => {
           <div className="nav-item">
             <Link to="/"><p>Home</p></Link>
           </div>
+          
+          {/* Services - No dropdown, just scroll behavior */}
+          <div className="nav-item">
+            <button 
+              onClick={scrollToServices}
+              className="services-button"
+              style={{ 
+                background: 'none', 
+                border: 'none', 
+                color: 'inherit',
+                cursor: 'pointer',
+                fontSize: 'inherit',
+                fontFamily: 'inherit',
+                padding: '0',
+                margin: '0'
+              }}
+            >
+              <p>Services</p>
+            </button>
+          </div>
+
+          {/* Other menu items with dropdowns */}
           {menuItems.map((item, idx) => (
             <div className="nav-item" key={idx}>
               <ul className="desktop-menu-category-list">

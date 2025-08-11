@@ -248,7 +248,7 @@ const CardSection = () => {
                 <div className="badge">{plan.title}</div>
                 <h3>{plan.title}</h3>
                 <div className="sub">{plan.sub}</div>
-                <div className="price">{plan.price}<span>/mo</span></div>
+                <div className="price">{plan.price}</div>
                 <div className="free">Free SSL & Email</div>
                 <div className="top-feature">Top Features</div>
                 <ul className="feature-list">
@@ -257,7 +257,16 @@ const CardSection = () => {
                   ))}
                 </ul>
                 <div className="more">See more features</div>
-                <button className="buy">Buy Now</button>
+                <button 
+                  className="buy" 
+                  onClick={() => {
+                    const message = `Hi, I'm interested in ${plan.title} service. Can you provide more details?`;
+                    const whatsappUrl = `https://wa.me/916296373387?text=${encodeURIComponent(message)}`;
+                    window.open(whatsappUrl, '_blank');
+                  }}
+                >
+                  Buy Now
+                </button>
                 <div className="renew">Renews at same price</div>
               </div>
             </SwiperSlide>

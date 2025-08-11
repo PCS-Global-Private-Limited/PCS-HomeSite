@@ -5,6 +5,7 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import Alok from './Alok-Sir.png'; // Ensure this image is in the correct path
+import banner  from './banner.png'
 
 const OurHistory = () => {
   return (
@@ -12,9 +13,8 @@ const OurHistory = () => {
       {/* 1. Banner Image (Single) */}
       <section className="banner-carousel">
         <img
-          src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1920&q=80"
-          alt="Technology Banner"
-          style={{ width: "100%", height: "400px", objectFit: "cover" }}
+          src={banner}
+          alt="Technology Stack Banner"
         />
       </section>
 

@@ -88,24 +88,24 @@ function Footer() {
               <div className="space-y-4 text-gray-700 hover:text-gray-500">
                 <h3 className="text-lg font-semibold pt-3">COMPANY</h3>
                 <nav className="flex flex-col space-y-2">
-                  <a
-                    href="#"
+                  <Link
+                    to="/"
                     className="text-gray-700 hover:text-gray-500 transition-colors text-sm"
                   >
                     Home
-                  </a>
-                  <a
-                    href="#"
+                  </Link>
+                  <Link
+                    to="/about"
                     className="text-gray-700 hover:text-gray-500 transition-colors text-sm"
                   >
                     About us
-                  </a>
-                  <a href="#" className=" transition-colors text-sm">
+                  </Link>
+                  <Link to="/portfolio" className="text-gray-700 hover:text-gray-500 transition-colors text-sm">
                     Project
-                  </a>
-                  <a href="/privacypolicy" className="transition-colors text-sm">
+                  </Link>
+                  <Link to="/privacypolicy" className="text-gray-700 hover:text-gray-500 transition-colors text-sm">
                     Privacy Policy
-                  </a>
+                  </Link>
                 </nav>
               </div>
 

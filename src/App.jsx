@@ -31,13 +31,13 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/our-history" element={<TeamShowcase />} />
+        <Route path="/our-team" element={<TeamShowcase />} />
         <Route path="/about" element={<OurHistory />} />
         <Route path="/terms-conditions" element={<TermsConditions />} />
         <Route path="/return-refund" element={<ReturnRefund />} />
         <Route path="/our-knowledge" element={<OurKnowledge3 />} />
         <Route path="/contact" element={<ContactUs />} />
-        <Route path="/about-careers" element={<Career/>} />
+        <Route path="/careers" element={<Career/>} />
         <Route path="/privacypolicy" element={<Privacypolicy />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/enterprise-web-solutions" element={<Enterprisewebsolutions/>} />
