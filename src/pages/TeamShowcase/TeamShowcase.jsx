@@ -63,8 +63,8 @@ const getTeamMembers = (members, prefix, designation = 'Member') =>
 
 const teams = {
   'MERN Stack': [
-    // { name: 'Bharath Simha Reddy', img: MERN_Bharath, designation: ' Software Engineer' },
-    // { name: 'Piyush Mishra', img: MERN_Piyush, designation: 'Trainee Software Engineer' },
+    { name: 'Bharath Simha Reddy', img: MERN_Bharath, designation: ' Software Engineer' },
+    { name: 'Piyush Mishra', img: MERN_Piyush, designation: 'Trainee Software Engineer' },
     { name: 'Aparna', img: MERN_Aparna, designation: 'Trainee Software Engineer' },
     { name: 'Atrika', img: MERN_Atrika, designation: 'Trainee Software Engineer' },
     { name: 'Medhun', img: MERN_Medhun, designation: 'Software Engineer' },
@@ -82,7 +82,7 @@ const teams = {
     { name: 'Sampurna', img: SF_Sampurna, designation: 'Salesforce Specialist' },
   ],
   'JAVA Developer': [
-    { name: 'Anita Acharjya', img: Java_Anita, designation: 'Sr.Java Developer' },
+    { name: 'Anita Acharjya', img: Java_Anita, designation: 'Sr. Software Engineer' },
     { name: 'Nayan', img: Java_Nayan, designation: 'Java Trainer' },
     { name: 'Rahul Kumar Rajak', img: Java_Rahul, designation: 'Java Developer' },
     { name: 'Shivani', img: Java_Shivani, designation: 'Java Developer' },
