@@ -170,7 +170,7 @@ function ContactUs() {
                       <div className="flex-shrink-0">
                         <Mail className="w-6 h-6" />
                       </div>
-                      <span className="text-lg">contact@pcsgl.com</span>
+                      <span className="text-lg">contact@pcsgpl.com</span>
                     </div>
 
                     <div className="flex items-start space-x-4">
