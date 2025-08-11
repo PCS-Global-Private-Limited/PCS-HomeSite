@@ -1,21 +1,70 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import {
+  Briefcase, Lightbulb, TrendingUp, Users, Code, Cloud, ChevronRight,
+  Database, Coffee, Smartphone, Server, Wifi, FlaskConical, BrainCircuit
+} from 'lucide-react'; // Added new icons for specific technologies
 import './OurHistory.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import Alok from './Alok-Sir.png'; // Ensure this image is in the correct path
-import banner  from './banner.png'
+import Alok from './Alok-Sir.png';
+import banner  from './12.jpg'
+import office1 from './office1.jpeg'
+import office2 from './office2.jpeg'
+import office3 from './office3.jpeg'
+import office4 from './office4.jpeg'
+import office5 from './office5.png'
+import office6 from './office6.png'
+import Counter from '../../components/Counter/Counter'
+
+
+
+
 
 const OurHistory = () => {
+  const heroRef = useRef(null);
+
+  useEffect(() => {
+    // Hero Section Animation
+    gsap.fromTo(heroRef.current,
+      { opacity: 0, y: -50 },
+      { opacity: 1, y: 0, duration: 1.5, ease: "power4.out" }
+    );
+    gsap.fromTo(heroRef.current.children[0].children[0],
+      { opacity: 0, x: -50 },
+      { opacity: 1, x: 0, duration: 1.5, delay: 0.5, ease: "power4.out" }
+    );
+    gsap.fromTo(heroRef.current.children[0].children[1],
+      { opacity: 0, x: 50 },
+      { opacity: 1, x: 0, duration: 1.5, delay: 0.7, ease: "power4.out" }
+    );
+    gsap.fromTo(heroRef.current.children[0].children[2],
+      { opacity: 0, y: 20 },
+      { opacity: 1, y: 0, duration: 1.2, delay: 0.9, ease: "power3.out" }
+    );
+    }, []);
+
   return (
     <div className="our-history-page">
       {/* 1. Banner Image (Single) */}
-      <section className="banner-carousel">
-        <img
-          src={banner}
-          alt="Technology Stack Banner"
-        />
+      <section ref={heroRef} className="relative h-[82vh] flex items-center justify-center p-6 overflow-hidden">
+        <div className="absolute inset-0 h-[82vh] bg-cover bg-center" style={{ backgroundImage: `url(${banner})` }}></div>
+        <div className="relative z-10 text-center max-w-5xl mx-auto">
+          <h1 className="text-6xl md:text-7xl font-extrabold mb-6 leading-tight text-blue-500 bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+            Driving Business Success Through Innovation
+          </h1>
+          <p className="text-xl md:text-2xl mb-10 opacity-80 max-w-3xl mx-auto">
+            We Empower businesses to achieve success through cutting-edge innovation and smart technology solutions.
+
+          </p>
+          <button className="bg-gradient-to-r from-blue-400 to-blue-800 text-white px-10 py-5 rounded-full shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105 font-bold text-lg flex items-center justify-center mx-auto" onClick={() => navigate('/about')}>
+            Explore Our Vision <ChevronRight className="ml-2" size={20} />
+          </button>
+        </div>
       </section>
 
       {/* 2. Idea by CEO */}
@@ -38,10 +87,22 @@ Because at the heart of true innovation is empathy, and at PCS Global, we’re c
       {/* 3. Office Gallery Carousel */}
       <section className="gallery-carousel">
         <h2>Our Journey in Pictures</h2>
-        <Swiper modules={[Autoplay]} autoplay={{ delay: 2000 }} spaceBetween={20} slidesPerView={3} loop>
-          {[1, 2, 3, 4, 5, 6].map((n) => (
-            <SwiperSlide key={n}>
-              <img src={`https://via.placeholder.com/300x200?text=Office+${n}`} alt={`Office ${n}`} />
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          autoplay={{ delay: 2000, disableOnInteraction: false }}
+          pagination={{ clickable: true }}
+          spaceBetween={20}
+          slidesPerView={3}
+          loop
+          breakpoints={{
+            0: { slidesPerView: 1 },
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+        >
+          {[office1, office2, office3, office4, office5, office6].map((imgSrc, idx) => (
+            <SwiperSlide key={idx}>
+              <img src={imgSrc} alt={`Office ${idx + 1}`} />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -107,15 +168,7 @@ Because at the heart of true innovation is empathy, and at PCS Global, we’re c
       </section>
 
       {/* 7. Global Reach / Stats */}
-      <section className="global-reach">
-        <h2>Our Global Presence</h2>
-        <div className="stats-container">
-          <div className="stat-box"><h3>12+</h3><p>Years in Business</p></div>
-          <div className="stat-box"><h3>25+</h3><p>Countries Served</p></div>
-          <div className="stat-box"><h3>100+</h3><p>Corporate Clients</p></div>
-          <div className="stat-box"><h3>500+</h3><p>Projects Delivered</p></div>
-        </div>
-      </section>
+      <Counter />
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'; // <-- add useLocation
-import Logo from './logo.webp';
+import Logo from './logowhite.png';
 import {
   FiMenu,
   FiX,

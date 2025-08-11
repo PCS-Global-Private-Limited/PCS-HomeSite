@@ -8,7 +8,6 @@ import Abhishek from './Abhishek.png';
 import Dipanwita from './Dipanwita.png';
 
 // MERN team
-import MERN_Anjali from './MERN_Anjali.png';
 import MERN_Aparna from './MERN_Aparna.png';
 import MERN_Atrika from './MERN_Atrika.png';
 import MERN_Bharath from './MERN_Bharath.png';
@@ -64,7 +63,7 @@ const getTeamMembers = (members, prefix, designation = 'Member') =>
 const teams = {
   'MERN Stack': [
     { name: 'Bharath Simha Reddy', img: MERN_Bharath, designation: ' Software Engineer' },
-    { name: 'Piyush Mishra', img: MERN_Piyush, designation: 'Trainee Software Engineer' },
+    // { name: 'Piyush Mishra', img: MERN_Piyush, designation: 'Trainee Software Engineer' },
     { name: 'Aparna', img: MERN_Aparna, designation: 'Trainee Software Engineer' },
     { name: 'Atrika', img: MERN_Atrika, designation: 'Trainee Software Engineer' },
     { name: 'Medhun', img: MERN_Medhun, designation: 'Software Engineer' },
@@ -126,6 +125,16 @@ const TeamShowcase = () => {
   return (
     <div className="team-showcase-container">
       <div className="team-showcase">
+        {/* Heading Section */}
+        <div className="text-center mb-8">
+          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+            LEADERSHIP IN ACTION
+          </h1>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Our managers lead by example, driving innovation, fostering teamwork, and guidinng the company toward sustainable growth and excellence.
+          </p>
+        </div>
+
         {/* Leaders Section */}
         <div className="leaders-banner">
           {leaders.map((leader, idx) => (

@@ -46,11 +46,11 @@ const reviews = [
 const logos = [
   // Replaced non-loading logos with reliable Clearbit logo endpoints
   "https://logo.clearbit.com/tumblr.com",
-  "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg",
+  "https://logo.clearbit.com/wb.gov.in",
   "https://logo.clearbit.com/nginx.com",
   "https://logo.clearbit.com/upwork.com",
-  "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
-  "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
+  "https://logo.clearbit.com/plausible.io",
+  "https://logo.clearbit.com/tally.so",
 ];
 
 const CustomerRev = () => {

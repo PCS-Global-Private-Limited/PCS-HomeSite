@@ -462,7 +462,7 @@
   background-color: #14408a;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .faq-container,
   .contact-form {
     max-width: 100%;
@@ -478,7 +478,7 @@
 }
 
 /* --- Reduce header height and logo size on mobile --- */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .header-container {
     min-height: 56px;
     height: auto;
@@ -689,7 +689,7 @@
 }
 
 /* --- Mobile Hamburger & Dropdown Fix --- */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .nav-links {
     position: fixed;
     top: 64px; /* height of header */

@@ -8,8 +8,8 @@ import "swiper/css/effect-fade";
 import "./Hero.scss";
 
 import firstban from "./firstban.webp";
-import secondImg from "./secondImg.webp";
-import thirdImg from "./thirdImg.webp";
+import secondImg from "./ONE.webp";
+import thirdImg from "./secondban.webp";
 
 
 const slides = [ { img: firstban }, { img: secondImg }, { img: thirdImg }];
