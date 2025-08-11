@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import { FaSearch, FaStickyNote, FaShieldAlt, FaUndo } from 'react-icons/fa';
 import { FiHome } from 'react-icons/fi';    
-import Logo from '../components/Header/logo.webp';
+import Logo from '../components/Header/logowhite.png';
 import { useNavigate } from 'react-router-dom';
 
 const TermsConditions = () => {
