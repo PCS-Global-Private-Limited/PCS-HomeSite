@@ -134,7 +134,7 @@ function Footer() {
 
               {/* Right side - Email form */}
               <div className="">
-                <form className="flex md:gap-0 md:flex-row items-center justify-center md:justify-start bg-white rounded-3xl">
+                <form className="flex sm:gap-0  sm:flex-col items-center justify-center sm:justify-start bg-white rounded-3xl">
                   <input type="email" placeholder="type your email" className="flex-1 pl-3 md:px-8 md:py-2 text-gray-600 placeholder-gray-400 focus:outline-none focus:ring-0 bg-white  rounded-4xl" required />
                   <button className="bg-[#3b94f8] px-4 md:px-5 py-2 text-white rounded-2xl" type="submit">Submit</button>
                 </form>

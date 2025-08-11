@@ -159,7 +159,7 @@ const Header = () => {
 
         <div className={`nav-links ${isOpen ? 'show' : ''}`}>
           <div className="nav-item">
-            <Link to="/"><p>Home</p></Link>
+            <Link to="/" onClick={()=>setIsOpen(!isOpen)}>Home</Link>
           </div>
           
           {/* Services - No dropdown, just scroll behavior */}
@@ -187,7 +187,7 @@ const Header = () => {
             <div className="nav-item" key={idx}>
               <ul className="desktop-menu-category-list">
                 <li
-                  className={`menu-category${openDropdown === idx ? ' open' : ''}`}
+                  className={`menu-category${openDropdown === idx ? ' open' : 'close'}`}
                   onClick={() => window.innerWidth < 768 && handleDropdown(idx)}
                   onMouseEnter={() => handleDropdownMouseEnter(idx)}
                   onMouseLeave={handleDropdownMouseLeave}
@@ -203,7 +203,7 @@ const Header = () => {
                         <div className="item">
                           <div className="dropdown_menu-title">
                             {item.links.map((link, linkIdx) => (
-                              <Link to={link.to} key={linkIdx}><p>{link.text}</p></Link>
+                              <Link to={link.to} key={linkIdx}><p onClick={()=>setIsOpen(!isOpen)}>{link.text}</p></Link>
                             ))}
                           </div>
                         </div>
@@ -219,7 +219,7 @@ const Header = () => {
               href="https://sales.pcsgpl.com"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: isDark ? 'white' : '', textDecoration: 'none' }}
+              style={{ color: isDark ? 'white' : 'white', textDecoration: 'none' }}
             >
               <p>Sign Up</p>
             </a>

@@ -13,6 +13,13 @@
   overflow: visible; /* Ensure this is set */
 }
 
+@media screen and (max-width :860px) {
+   .header-container{
+  height: 100px;
+   }
+}
+
+
 .header-container,
 .right-section,
 .nav-links {
@@ -87,7 +94,7 @@
 }
 
 .logo-container {
-  width: 50%;
+  width: 100%;
   padding: 0.25rem;
 }
 
@@ -101,7 +108,6 @@
   width: 100%;
   object-fit: contain;
   height: 130px;
-  margin-top: 20px;
 }
 
 .toggle-button {
@@ -507,7 +513,7 @@
     display: block;
     margin-top: 30px;
   }
-  
+
   .toggle-button svg {
         width: 2.8rem;
         height: 2.8rem;
@@ -694,10 +700,11 @@
   .nav-links.show {
     display: flex;
   }
+
   .nav-item {
     width: 100%;
     background: none;
-    color: #222;
+    color: #313e3b;
     border-radius: 0;
     padding: 0.75rem 1.5rem;
     font-size: 1.1rem;
@@ -719,9 +726,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-weight: 600;
     font-size: 1.1rem;
-    color: #3b94f8;
+    color: #313e3b;
     cursor: pointer;
     padding: 0;
     background: none;
@@ -754,6 +760,12 @@
     border-radius: 0;
     color: #313e3b;
     background: none;
+  }
+.menu-title:hover{
+color: white;
+}
+  .dropdown-panel-list {
+margin-top: 20px;
   }
   .dropdown_menu-title p:hover {
     background: #eaf4ff;

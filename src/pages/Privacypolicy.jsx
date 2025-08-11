@@ -35,7 +35,7 @@ const Privacypolicy = () => {
       <section className="bg-blue-950 pb-20 p-6 md:p-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center">
-            <img src={Logo} alt="logo" className="w-30 h-30" />
+            <img src={Logo} alt="logo" className="w-40 h-25" />
             <div className="pl-3">
               <h1 className="text-3xl font-bold text-white">Privacy Policy</h1>
               <div className="flex flex-wrap gap-2 mt-2">
@@ -43,7 +43,7 @@ const Privacypolicy = () => {
                   <FaShieldAlt className="mr-2" />
                   <span>Pcs Global</span>
                 </button>
-                <button className="bg-gray-100 px-4 py-1 flex items-center rounded-3xl text-sm">
+                <button className="bg-gray-100 px-2 py-1 flex items-center rounded-3xl text-sm">
                   <FaStickyNote className="mr-2" />
                   <span>Legal document</span>
                 </button>
