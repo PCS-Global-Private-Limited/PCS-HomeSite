@@ -163,14 +163,14 @@ function ContactUs() {
                       <div className="flex-shrink-0">
                         <Phone className="w-6 h-6" />
                       </div>
-                      <span className="text-lg">+91 6296373387</span>
+                      <span className="text-lg">+91 9147727832</span>
                     </div>
 
                     <div className="flex items-center space-x-4">
                       <div className="flex-shrink-0">
                         <Mail className="w-6 h-6" />
                       </div>
-                      <span className="text-lg">contact@pcsgl.com</span>
+                      <span className="text-lg">contact@pcsgpl.com</span>
                     </div>
 
                     <div className="flex items-start space-x-4">

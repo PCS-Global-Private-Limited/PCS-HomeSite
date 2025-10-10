@@ -32,7 +32,7 @@ const Portfolio = () => {
       demo: 'https://pcshr.pcsgpl.com/',
       images: ['/pcsgpl1.webp', '/pcsgpl2.webp', '/pcsgpl3.webp'],
     },
-       {
+    {
       title: 'Python Project',
       category: 'Python',
       desc: 'Automation and backend services built with Python.',
@@ -88,7 +88,6 @@ const Portfolio = () => {
     <div style={{ padding: '40px', textAlign: 'center', fontFamily: 'Arial' }}>
       <h1 style={{ fontSize: '3rem', color: '#2c3e50', marginBottom: '30px' }}>PORTFOLIO</h1>
 
-
       <div style={{ marginBottom: '30px', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '10px' }}>
         {categories.map(cat => (
           <button
@@ -110,25 +109,33 @@ const Portfolio = () => {
         ))}
       </div>
 
-   
       <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '20px' }}>
         {filteredProjects.map((project, idx) => (
-          <div key={idx} style={cardStyle} onClick={() => openModal(project)}>
+          <div
+            key={idx}
+            style={cardStyle}
+            onClick={() => openModal(project)}
+            className="portfolio-card"
+          >
+        
             <img
               src={project.images[0]}
               alt={project.title}
-              style={{ width: '100%', height: '200px', objectFit: 'cover' }}
+              style={{ width: '100%', height: '200px', objectFit: 'cover', display: 'block' }}
             />
+
+            
+            <div className="overlay">+</div>
+
+        
             <div style={{ padding: '16px', textAlign: 'left' }}>
               <h3 style={{ color: '#3498db', fontWeight: 'bold' }}>{project.title}</h3>
               <p style={{ fontSize: '0.95rem', color: '#555' }}>{project.desc}</p>
-            
             </div>
           </div>
         ))}
       </div>
 
-    
       {modalOpen && (
         <div
           style={{
@@ -205,9 +212,6 @@ const Portfolio = () => {
               Demo
             </a>
 
-         
-
-            
             <button
               onClick={() => setModalOpen(false)}
               style={{
@@ -227,6 +231,36 @@ const Portfolio = () => {
           </div>
         </div>
       )}
+
+     
+      <style>
+        {`
+          .portfolio-card {
+            position: relative;
+            overflow: hidden;
+          }
+          .portfolio-card .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            background-color: rgba(11, 60, 92, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+          }
+          .portfolio-card:hover .overlay {
+            opacity: 1;
+          }
+        `}
+      </style>
     </div>
   );
 };

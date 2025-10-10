@@ -88,24 +88,24 @@ function Footer() {
               <div className="space-y-4 text-gray-700 hover:text-gray-500">
                 <h3 className="text-lg font-semibold pt-3">COMPANY</h3>
                 <nav className="flex flex-col space-y-2">
-                  <a
-                    href="#"
+                  <Link
+                    to="/"
                     className="text-gray-700 hover:text-gray-500 transition-colors text-sm"
                   >
                     Home
-                  </a>
-                  <a
-                    href="#"
+                  </Link>
+                  <Link
+                    to="/about"
                     className="text-gray-700 hover:text-gray-500 transition-colors text-sm"
                   >
                     About us
-                  </a>
-                  <a href="#" className=" transition-colors text-sm">
+                  </Link>
+                  <Link to="/portfolio" className="text-gray-700 hover:text-gray-500 transition-colors text-sm">
                     Project
-                  </a>
-                  <a href="/privacypolicy" className="transition-colors text-sm">
+                  </Link>
+                  <Link to="/privacypolicy" className="text-gray-700 hover:text-gray-500 transition-colors text-sm">
                     Privacy Policy
-                  </a>
+                  </Link>
                 </nav>
               </div>
 
@@ -113,7 +113,8 @@ function Footer() {
               <div className="space-y-4 text-gray-700 hover:text-gray-500">
                 <h3 className="text-lg font-semibold pt-3">GET IN TOUCH</h3>
                 <div className="space-y-2">
-                  <p className=" text-sm">+91 6296373387</p>
+                  <p className=" text-sm">+91 9147727832</p>
+                  <p className=" text-sm">+033-4517-999-3</p>
                   <p className=" text-sm">contact@pcsgpl.com</p>
                 </div>
               </div>
@@ -133,7 +134,7 @@ function Footer() {
 
               {/* Right side - Email form */}
               <div className="">
-                <form className="flex md:gap-0 md:flex-row items-center justify-center md:justify-start bg-white rounded-3xl">
+                <form className="flex sm:gap-0  sm:flex-col items-center justify-center sm:justify-start bg-white rounded-3xl">
                   <input type="email" placeholder="type your email" className="flex-1 pl-3 md:px-8 md:py-2 text-gray-600 placeholder-gray-400 focus:outline-none focus:ring-0 bg-white  rounded-4xl" required />
                   <button className="bg-[#3b94f8] px-4 md:px-5 py-2 text-white rounded-2xl" type="submit">Submit</button>
                 </form>
