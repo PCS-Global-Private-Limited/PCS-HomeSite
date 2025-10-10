@@ -100,10 +100,6 @@ Because at the heart of true innovation is empathy, and at PCS Global, we’re c
           <p>“PCS Global, driven by a clear purpose — to build meaningful solutions that serve real people and solve real problems in real time. Our journey is rooted in trust, innovation, and a deep commitment to those we work with.”</p>
           <span>- Abhishek Ghosh, CTO</span>
         </div>
-        <div className="quote-box">
-          <p>“At PCS Global, operational strength is built on clarity, consistency, and collaboration, aligning strategy with execution to ensure every solution we deliver is scalable, efficient, and future-ready.”</p>
-          <span>- Manish Bhattacharjee, COO</span>
-        </div>
       </section>
 
       {/* 7. Global Reach / Stats */}
