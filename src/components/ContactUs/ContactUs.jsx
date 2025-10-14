@@ -135,9 +135,9 @@ function ContactUs() {
       <div className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center my-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-2 md:mb-3">
+            <h2 className="text-4xl md:text-5xl font-bold mb-2 md:mb-3">
               Connect with us
-            </h1>
+            </h2>
             <p className="text-lg text-gray-500">
               Any question or remarks? Just write us a message!
             </p>
@@ -151,9 +151,9 @@ function ContactUs() {
                 <div className="absolute -bottom-16 -right-16 w-56 h-56 bg-[#030958] rounded-full "></div>
 
                 <div className="relative z-10">
-                  <h1 className="text-3xl sm:text-4xl font-bold mb-4">
+                  <h2 className="text-3xl sm:text-4xl font-bold mb-4">
                     Contact Information
-                  </h1>
+                  </h2>
                   <p className="text-blue-100 mb-8 text-lg">
                     Say something to start a live chat!
                   </p>
