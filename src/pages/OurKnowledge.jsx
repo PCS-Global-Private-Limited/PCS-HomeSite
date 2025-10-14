@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -150,6 +151,18 @@ const OurKnowledge3 = () => {
 
   return (
     <div className="font-inter antialiased text-gray-800 bg-white min-h-screen">
+      <Helmet>
+        <title>Our Knowledge — Services & Expertise | PCS Global</title>
+        <meta
+          name="description"
+          content="Explore PCS Global’s core offerings: MERN, Java, React Native, IoT, Python, Data Science, and AI solutions that future-proof your business."
+        />
+        <meta property="og:title" content="Our Knowledge — PCS Global" />
+        <meta
+          property="og:description"
+          content="Explore our MERN, Java, React Native, IoT, Python, Data Science, and AI capabilities."
+        />
+      </Helmet>
       
       <script src="https://cdn.tailwindcss.com"></script>
      
@@ -205,9 +218,9 @@ const OurKnowledge3 = () => {
                   </div>
                   <h3 className="text-4xl font-semibold text-gray-900 mb-6">{task.title}</h3>
                   <p className="text-lg text-gray-700 leading-relaxed">{task.description}</p>
-                  <button className="mt-8 text-blue-600 hover:text-blue-500 transition duration-300 flex items-center justify-center md:justify-start mx-auto md:mx-0">
+                  {/* <button className="mt-8 text-blue-600 hover:text-blue-500 transition duration-300 flex items-center justify-center md:justify-start mx-auto md:mx-0">
                     Learn More <ChevronRight className="ml-2" size={18} />
-                  </button>
+                  </button> */}
                 </div>
               </div>
             ))}

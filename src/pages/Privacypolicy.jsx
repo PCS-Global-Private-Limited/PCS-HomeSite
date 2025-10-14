@@ -108,7 +108,7 @@ const Privacypolicy = () => {
 
 
       <section className="p-5 flex flex-wrap items-center gap-4 shadow-md bg-gray-100 text-sm">
-        <h1>{highlightMatch('Quick jump to:')}</h1>
+        <h2>{highlightMatch('Quick jump to:')}</h2>
         <li>
           <a href="#">Information we collect</a>
         </li>
@@ -128,7 +128,7 @@ const Privacypolicy = () => {
        
         <div className="w-full lg:w-1/4 flex flex-col gap-8">
           <div className="shadow-md bg-gray-10 p-5 outline outline-2 outline-gray-300 rounded-3xl">
-            <h1 className="font-bold">Table of Contents</h1>
+            <h2 className="font-bold">Table of Contents</h2>
             <p><a href="#">Information we Collect</a></p>
             <p><a href="#">How we use your information</a></p>
             <p><a href="#">How we share Information</a></p>
@@ -140,7 +140,7 @@ const Privacypolicy = () => {
           </div>
 
           <div className="shadow-md bg-gray-100 p-5 outline outline-2 outline-gray-300 rounded-3xl">
-            <h1 className="font-bold">Need help</h1>
+            <h2 className="font-bold">Need help</h2>
             <p>
               <a href="#">Have questions about our Privacy practices?</a>
             </p>
@@ -154,7 +154,7 @@ const Privacypolicy = () => {
  
         <div className="w-full lg:w-3/4 flex flex-col gap-10">
           <section className="bg-gray-10 p-5 rounded-3xl outline outline-2 outline-gray-300">
-            <h1 className="mb-4 font-bold text-lg">Information we collect</h1>
+            <h2 className="mb-4 font-bold text-lg">Information we collect</h2>
             <p className="mb-5">
               At PCS Global, we respect your privacy and are committed to
               protecting your personal information. This Privacy Policy
@@ -164,7 +164,7 @@ const Privacypolicy = () => {
 
             <div className="grid md:grid-cols-2 gap-4">
               <div>
-                <h1 className="font-bold">Personal Information</h1>
+                <h3 className="font-bold">Personal Information</h3>
                 <ul className="list-disc ml-5">
                   <li>Name and Contact details</li>
                   <li>Email and Phone number</li>
@@ -174,7 +174,7 @@ const Privacypolicy = () => {
                 </ul>
               </div>
               <div>
-                <h1 className="font-bold">Automatic Information</h1>
+                <h3 className="font-bold">Automatic Information</h3>
                 <ul className="list-disc ml-5">
                   <li>IP address and device information</li>
                   <li>Browser type and version</li>
@@ -187,7 +187,7 @@ const Privacypolicy = () => {
           </section>
 
           <section className="bg-gray-10 p-5 rounded-3xl outline outline-2 outline-gray-300">
-            <h1 className="mb-4 font-bold text-lg">How we use Your Information</h1>
+            <h2 className="mb-4 font-bold text-lg">How we use Your Information</h2>
             <p className="mb-5">
               We use your information to provide and improve our real estate
               services, process transactions, and communicate with you.
@@ -195,7 +195,7 @@ const Privacypolicy = () => {
 
             <div className="space-y-6">
               <div>
-                <h2 className="font-bold">A. Service Provision</h2>
+                <h3 className="font-bold">A. Service Provision</h3>
                 <ul className="list-disc ml-5">
                   <li>Process property reservations and purchases</li>
                   <li>Facilitate owner financing arrangements</li>
@@ -205,7 +205,7 @@ const Privacypolicy = () => {
               </div>
 
               <div>
-                <h2 className="font-bold">B. Communication</h2>
+                <h3 className="font-bold">B. Communication</h3>
                 <ul className="list-disc ml-5">
                   <li>Send important service notifications</li>
                   <li>Respond to inquiries and support requests</li>
@@ -215,7 +215,7 @@ const Privacypolicy = () => {
               </div>
 
               <div>
-                <h2 className="font-bold">C. Legal and Security</h2>
+                <h3 className="font-bold">C. Legal and Security</h3>
                 <ul className="list-disc ml-5">
                   <li>Comply with legal and regulatory requirements</li>
                   <li>Prevent fraud and ensure platform security</li>

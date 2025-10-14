@@ -109,7 +109,7 @@ const ReturnRefund = () => {
 
         <div className="w-full lg:w-3/4 flex flex-col m-auto gap-10 mt-10">
           <section className="bg-gray-10 p-5 rounded-3xl outline outline-2 outline-gray-300">
-            <h1 className="mb-4 font-bold text-xl">1. Applicability</h1>
+            <h2 className="mb-4 font-bold text-xl">1. Applicability</h2>
             <p className="mb-5 text-lg">
               This policy applies to all services, software solutions, digital products, and related deliverables purchased directly from PCS Global, via our website or through direct engagement.
             </p>
@@ -117,7 +117,7 @@ const ReturnRefund = () => {
           </section>
 
           <section className="bg-gray-10 p-5 rounded-3xl outline outline-2 outline-gray-300">
-            <h1 className="mb-4 font-bold text-xl">2. Non-Tangible / Digital Services</h1>
+            <h2 className="mb-4 font-bold text-xl">2. Non-Tangible / Digital Services</h2>
             <p className="mb-5 text-lg">
               As our services are primarily digital in nature — including but not limited to software development, cloud solutions, consulting, and custom IT deployments — returns are<b> not applicable once a service has been rendered or a project has been initiated.</b><br/>
               However, in specific cases where a written agreement defines cancellation terms, such terms shall prevail.
@@ -129,7 +129,7 @@ const ReturnRefund = () => {
     
 
 <section className="bg-gray-10 p-5 rounded-3xl outline outline-2 outline-gray-300">
-            <h1 className="mb-4 font-bold text-xl">3. Cancellation Requests</h1>
+            <h2 className="mb-4 font-bold text-xl">3. Cancellation Requests</h2>
             <p className="mb-5 text-lg">
               <li><b>	Before Service Initiation:</b> You may request cancellation within 48 hours of placing an order, provided that service delivery has not started.</li>
             <li><b>	After Service Initiation:</b> Once a project has commenced (design, development, consultation, or provisioning), no cancellations will be accepted unless explicitly stated in a signed agreement.</li>
@@ -138,7 +138,7 @@ const ReturnRefund = () => {
           </section>
 
                 <section className="bg-gray-10 p-5 rounded-3xl outline outline-2 outline-gray-300">
-            <h1 className="mb-4 font-bold text-xl">4. Refund Eligibility</h1>
+            <h2 className="mb-4 font-bold text-xl">4. Refund Eligibility</h2>
             <p className="mb-5 text-lg">
               Refunds may be granted under the following limited conditions:
               <li><b>Duplicate Payment:</b> If a customer is charged more than once for the same service due to a technical error.</li>
@@ -148,9 +148,9 @@ const ReturnRefund = () => {
           </section>
 
           <section className="bg-gray-10 p-5 rounded-3xl outline outline-2 outline-gray-300">
-            <h1 className="mb-4 font-bold text-xl">5. No Refund Circumstances</h1>
+            <h2 className="mb-4 font-bold text-xl">5. No Refund Circumstances</h2>
             <p className="mb-5 text-lg">
-              <h1 className='text-xl'>Refunds will not be issued for:</h1>
+              <h3 className='text-xl'>Refunds will not be issued for:</h3>
               <li>	Change of mind after service initiation</li>
             
          <li>	Delay caused by client-side inaction (e.g., failure to provide required materials or approvals</li>
@@ -162,9 +162,9 @@ const ReturnRefund = () => {
 
 
 <section className="bg-gray-10 p-5 rounded-3xl outline outline-2 outline-gray-300">
-            <h1 className="mb-4 font-bold text-xl">6. Contact for Return & Refund Queries</h1>
+            <h2 className="mb-4 font-bold text-xl">6. Contact for Return & Refund Queries</h2>
             <p className="mb-5 text-lg">
-                <h1 className='text-xl'>For all return, cancellation, or refund-related concerns, please contact:</h1>
+                <h3 className='text-xl'>For all return, cancellation, or refund-related concerns, please contact:</h3>
                 <b>Finance & Compliance Team</b><br/>
                 📧 Email: support@pcsgpl.us<br/>
 📞 Phone: +91-33-4517-9993<br/>
